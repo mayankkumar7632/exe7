@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Nexora Tech</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar dashboard-nav">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-mark">N</span>
+        <span class="logo-text">Nexora<span>Tech</span></span>
+      </div>
+      <div class="user-chip">
+        <span id="userAvatar" class="user-avatar">U</span>
+        <span id="userName" class="user-name"></span>
+      </div>
+      <div class="nav-actions">
+        <button id="logoutBtn" class="btn btn-outline btn-sm">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="dashboard-main">
+    <div class="dashboard-header">
+      <h1 id="welcomeMsg">Welcome</h1>
+      <p class="subtitle" id="subtitleMsg">Loading...</p>
+    </div>
+
+    <div id="approvalBanner" class="approval-banner hidden">
+      <span class="banner-icon">⏳</span>
+      <p><strong>Approval Pending:</strong> Your account is awaiting approval from an administrator. You cannot view admin details until approved.</p>
+    </div>
+
+    <section class="dashboard-grid">
+
+      <div class="stat-card">
+        <div class="stat-icon">📋</div>
+        <div class="stat-info">
+          <span class="stat-label">Your Role</span>
+          <span id="statRole" class="stat-value">-</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🏢</div>
+        <div class="stat-info">
+          <span class="stat-label">Department</span>
+          <span id="statDept" class="stat-value">-</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">✅</div>
+        <div class="stat-info">
+          <span class="stat-label">Status</span>
+          <span id="statStatus" class="stat-value">-</span>
+        </div>
+      </div>
+
+      <div id="adminSection" class="content-card wide-card hidden">
+        <div class="card-head">
+          <h2><span class="gradient-text">Administrators</span></h2>
+          <p>Contact details of your organization's admins</p>
+        </div>
+        <div id="adminList" class="card-list"></div>
+      </div>
+
+      <div id="employeeSection" class="content-card wide-card hidden">
+        <div class="card-head">
+          <h2><span class="gradient-text">Employees</span></h2>
+          <p>Manage and approve employee accounts</p>
+        </div>
+        <div id="employeeList" class="card-list"></div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Nexora Tech. All rights reserved.</p>
+  </footer>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
